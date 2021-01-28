@@ -41,41 +41,41 @@ public class LinkedListAlgo {
   }
 
   // 有序链表合并
-  // public static Node mergeSortedLists(Node la, Node lb) {
-    // if (la == null) return lb;
-    // if (lb == null) return la;
+   public static Node mergeSortedLists(Node la, Node lb) {
+     if (la == null) return lb;
+     if (lb == null) return la;
 
-    // Node p = la;
-    // Node q = lb;
-    // Node head;
-    // if (p.data < q.data) {
-    //   head = p;
-    //   p = p.next;
-    // } else {
-    //   head = q;
-    //   q = q.next;
-    // }
-    // Node r = head;
+     Node p = la;
+     Node q = lb;
+     Node head;
+     if (p.data < q.data) {
+       head = p;
+       p = p.next;
+     } else {
+       head = q;
+       q = q.next;
+     }
+     Node r = head;
 
-    // while (p != null && q != null) {
-    //   if (p.data < q.data) {
-    //     r.next = p;
-    //     p = p.next;
-    //   } else {
-    //     r.next = q;
-    //     q = q.next;
-    //   }
-    //   r = r.next;
-    // }
+     while (p != null && q != null) {
+       if (p.data < q.data) {
+         r.next = p;
+         p = p.next;
+       } else {
+         r.next = q;
+         q = q.next;
+       }
+       r = r.next;
+     }
 
-    // if (p != null) {
-    //   r.next = p;
-    // } else {
-    //   r.next = q;
-    // }
+     if (p != null) {
+       r.next = p;
+     } else {
+       r.next = q;
+     }
 
-    // return head;
-   //}
+     return head;
+   }
   	
   	//-----------------------------------------
 
